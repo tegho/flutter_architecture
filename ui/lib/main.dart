@@ -23,6 +23,7 @@ class _MyAppState extends State<MyApp> {
     super.initState();
     _mainBloc = BlocFactory.instance.get<MainBloc>();
   }
+
   @override
   void dispose() {
     _mainBloc.dispose();
