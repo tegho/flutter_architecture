@@ -1,18 +1,11 @@
-
 import 'package:get_it/get_it.dart';
-import 'package:module_business/src/main_bloc.dart';
+import 'package:injectable/injectable.dart';
+import 'package:module_business/src/bloc_factory.config.dart';
+
 import 'package:module_data/module_data.dart';
 
-class BlocFactory {
-  static final _getIt = GetIt.I;
-
-  static final instance = BlocFactory();
-  T get<T extends Object>() => _getIt.get<T>();
-
-  void initialize() {
-    ServiceProvider.instance.initialize();
-    _getIt.registerFactory<MainBloc>(
-        () => MainBloc(dataService: ServiceProvider.instance.get<DataService>()),
-    );
-  }
+@InjectableInit()
+void blocFactoryInit() {
+  serviceProviderInit();
+  GetIt.I.init();
 }

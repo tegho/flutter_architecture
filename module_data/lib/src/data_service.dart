@@ -1,6 +1,8 @@
+import 'package:injectable/injectable.dart';
 import 'package:module_data/module_data.dart';
 import 'dart:math';
 
+@LazySingleton(as: DataService)
 class DataServiceLocal implements DataService {
   late final Random rnd;
 

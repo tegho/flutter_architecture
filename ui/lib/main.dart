@@ -1,10 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:get_it/get_it.dart';
 import 'package:module_business/module_business.dart';
 import 'package:provider/provider.dart';
-// import 'package:provider/provider.dart';
 
 void main() {
-  BlocFactory.instance.initialize();
   runApp(const MyApp());
 }
 
@@ -21,13 +20,8 @@ class _MyAppState extends State<MyApp> {
   @override
   void initState() {
     super.initState();
-    _mainBloc = BlocFactory.instance.get<MainBloc>();
-  }
-
-  @override
-  void dispose() {
-    _mainBloc.dispose();
-    super.dispose();
+    blocFactoryInit();
+    _mainBloc = GetIt.I.get<MainBloc>();
   }
 
   @override
