@@ -17,6 +17,9 @@
       <excludeFolder url="file://$MODULE_DIR$/module_data/.dart_tool" />
       <excludeFolder url="file://$MODULE_DIR$/module_data/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/module_data/build" />
+      <excludeFolder url="file://$MODULE_DIR$/module_model/build" />
+      <excludeFolder url="file://$MODULE_DIR$/module_model/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/module_model/.dart_tool" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 33, extension level 4 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />

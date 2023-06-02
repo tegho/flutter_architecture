@@ -2,6 +2,8 @@ import 'package:injectable/injectable.dart';
 import 'package:module_data/module_data.dart';
 import 'dart:math';
 
+import 'package:module_model/module_model.dart';
+
 @LazySingleton(as: DataService)
 class DataServiceLocal implements DataService {
   late final Random rnd;
@@ -11,12 +13,20 @@ class DataServiceLocal implements DataService {
   }
 
   @override
-  int getNextVal() {
-    return rnd.nextInt(100);
+  Future<LocationData> getMyLocation() async {
+    await Future.delayed(Duration(seconds: rnd.nextInt(4) + 1));
+    return LocationData(
+      position: rnd.nextInt(300),
+      locationName: 'Unknown',
+    );
   }
 
   @override
-  bool isGood() {
-    return rnd.nextBool();
+  Future<LocationData> getHisLocation() async {
+    await Future.delayed(Duration(seconds: rnd.nextInt(4) + 1));
+    return LocationData(
+      position: rnd.nextInt(300),
+      locationName: 'Unknown',
+    );
   }
 }

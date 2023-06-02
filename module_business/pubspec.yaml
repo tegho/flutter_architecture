@@ -9,6 +9,8 @@ environment:
 dependencies:
   get_it: ^7.6.0
   injectable: ^2.1.2
+  module_model:
+    path: '../module_model'
   module_data:
     path: '../module_data'
 

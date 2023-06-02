@@ -1,5 +1,6 @@
-abstract class DataService {
-  int getNextVal();
+import 'package:module_model/module_model.dart';
 
-  bool isGood();
+abstract class DataService {
+  Future<LocationData> getMyLocation();
+  Future<LocationData> getHisLocation();
 }

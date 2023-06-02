@@ -8,7 +8,12 @@ class MainBloc {
 
   MainBloc({required this.dataService});
 
-  int refresh() {
-    return (dataService.isGood()) ? dataService.getNextVal() : 999;
+  Future<int> distance() async {
+    final res = await Future.wait([
+      dataService.getMyLocation(),
+      dataService.getHisLocation(),
+    ]);
+
+    return (res[0].position - res[1].position).abs();
   }
 }

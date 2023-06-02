@@ -32,7 +32,8 @@ dependencies:
     sdk: flutter
   provider: ^6.0.5
   get_it: ^7.6.0
-#  injectable: ^2.1.1
+  module_model:
+    path: '../module_model'
   module_business:
     path: '../module_business'
 
