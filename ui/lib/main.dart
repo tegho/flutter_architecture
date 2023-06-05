@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:module_business/module_business.dart';
 import 'package:provider/provider.dart';
+import 'package:ui/src/codegen_example.dart';
 
 void main() {
   runApp(const MyApp());
@@ -56,6 +57,8 @@ class _MyHomePageState extends State<MyHomePage> {
 
   @override
   Widget build(BuildContext context) {
+    final v = Test2(99);
+
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
@@ -64,6 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
+            Text('Codegen: ${v.getName()}'),
             FutureBuilder(
                 future: context.read<MainBloc>().distance(),
                 builder: ((context, snapshot) {

@@ -20,6 +20,12 @@
       <excludeFolder url="file://$MODULE_DIR$/module_model/build" />
       <excludeFolder url="file://$MODULE_DIR$/module_model/.pub" />
       <excludeFolder url="file://$MODULE_DIR$/module_model/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/module_codegen/.pub" />
+      <excludeFolder url="file://$MODULE_DIR$/module_codegen/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/module_codegen/build" />
+      <excludeFolder url="file://$MODULE_DIR$/module_codegen_generator/build" />
+      <excludeFolder url="file://$MODULE_DIR$/module_codegen_generator/.dart_tool" />
+      <excludeFolder url="file://$MODULE_DIR$/module_codegen_generator/.pub" />
     </content>
     <orderEntry type="jdk" jdkName="Android API 33, extension level 4 Platform" jdkType="Android SDK" />
     <orderEntry type="sourceFolder" forTests="false" />
