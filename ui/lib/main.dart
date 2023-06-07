@@ -69,20 +69,22 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Text('Codegen: ${v.getName()}'),
             FutureBuilder(
-                future: context.read<MainBloc>().distance(),
-                builder: ((context, snapshot) {
-                  switch (snapshot.connectionState) {
-                    case ConnectionState.waiting:
-                      return const CircularProgressIndicator();
-                    case ConnectionState.done:
-                      if (snapshot.hasData) {
-                        return Text(snapshot.data.toString());
-                      }
-                      break;
-                    default:
-                  }
-                  return const Placeholder();
-                })),
+              future: context.read<MainBloc>().distance(),
+              builder: ((context, snapshot) {
+                switch (snapshot.connectionState) {
+                  case ConnectionState.waiting:
+                    return const CircularProgressIndicator();
+                  case ConnectionState.done:
+                    if (snapshot.hasData) {
+                      return Text(snapshot.data.toString());
+                    }
+                    break;
+                  default:
+                }
+
+                return const Placeholder();
+              }),
+            ),
           ],
         ),
       ),
