@@ -14,7 +14,8 @@ class DataServiceLocal implements DataService {
 
   @override
   Future<LocationData> getMyLocation() async {
-    await Future.delayed(Duration(seconds: rnd.nextInt(4) + 1));
+    await Future<dynamic>.delayed(Duration(seconds: rnd.nextInt(4) + 1));
+
     return LocationData(
       position: rnd.nextInt(300),
       locationName: 'Unknown',
@@ -23,7 +24,8 @@ class DataServiceLocal implements DataService {
 
   @override
   Future<LocationData> getHisLocation() async {
-    await Future.delayed(Duration(seconds: rnd.nextInt(4) + 1));
+    await Future<dynamic>.delayed(Duration(seconds: rnd.nextInt(4) + 1));
+
     return LocationData(
       position: rnd.nextInt(300),
       locationName: 'Unknown',
