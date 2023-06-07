@@ -13,7 +13,6 @@ class MainBloc {
       dataService.getMyLocation(),
       dataService.getHisLocation(),
     ]);
-
     return (res[0].position - res[1].position).abs();
   }
 }

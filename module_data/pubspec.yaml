@@ -18,4 +18,6 @@ dev_dependencies:
   test: ^1.21.0
   injectable_generator: ^2.1.6
   build_runner: ^2.3.3
+  module_analyzer:
+    path: '../module_analyzer'
 
