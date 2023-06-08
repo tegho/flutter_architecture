@@ -25,8 +25,8 @@ extension GetItInjectableX on _i1.GetIt {
       environment,
       environmentFilter,
     );
-    gh.factory<_i3.MainBloc>(
-        () => _i3.MainBloc(dataService: gh<_i4.DataService>()));
+    gh.factory<_i3.MainBLoC>(
+        () => _i3.MainBLoC(dataService: gh<_i4.DataService>()));
     return this;
   }
 }

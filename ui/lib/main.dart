@@ -16,19 +16,19 @@ class MyApp extends StatefulWidget {
 }
 
 class _MyAppState extends State<MyApp> {
-  late final MainBloc _mainBloc;
+  late final MainBLoC _mainBLoC;
 
   @override
   void initState() {
     super.initState();
     blocFactoryInit();
-    _mainBloc = GetIt.I.get<MainBloc>();
+    _mainBLoC = GetIt.I.get<MainBLoC>();
   }
 
   @override
   Widget build(BuildContext context) {
-    return Provider<MainBloc>(
-      create: (_) => _mainBloc,
+    return Provider<MainBLoC>(
+      create: (_) => _mainBLoC,
       child: MaterialApp(
         title: 'Flutter Demo',
         debugShowCheckedModeBanner: false,
@@ -69,7 +69,7 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Text('Codegen: ${v.getName()}'),
             FutureBuilder(
-              future: context.read<MainBloc>().distance(),
+              future: context.read<MainBLoC>().distance(),
               builder: ((context, snapshot) {
                 switch (snapshot.connectionState) {
                   case ConnectionState.waiting:
