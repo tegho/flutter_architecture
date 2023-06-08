@@ -3,10 +3,10 @@ import 'package:injectable/injectable.dart';
 import 'package:module_data/module_data.dart';
 
 @injectable
-class MainBLoC {
+class MainLogic {
   final DataService dataService;
 
-  MainBLoC({required this.dataService});
+  MainLogic({required this.dataService});
 
   Future<int> distance() async {
     final res = await Future.wait([
